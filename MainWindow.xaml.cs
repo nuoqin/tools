@@ -37,12 +37,15 @@ namespace code_tools
             var item5 = new ItemMenu("MD5加密", new MD5UC());
             var item6 = new ItemMenu("BASE64编解码", new Base64UC());
             var item7 = new ItemMenu("URL编解码", new UrlUC());
+            var item8 = new ItemMenu("websocket", new WebsocketClientUC());
             leftMenu.Children.Add(new UserControlMenuItem(item1, this));
             leftMenu.Children.Add(new UserControlMenuItem(item2, this));
             leftMenu.Children.Add(new UserControlMenuItem(item3, this));
             leftMenu.Children.Add(new UserControlMenuItem(item5, this));
             leftMenu.Children.Add(new UserControlMenuItem(item6, this));
             leftMenu.Children.Add(new UserControlMenuItem(item7, this));
+            leftMenu.Children.Add(new UserControlMenuItem(item8, this));
+            SwitchScreen(new UserControlCustomers());
         }
 
         internal void SwitchScreen(object sender){

@@ -43,5 +43,20 @@ namespace code_tools.utils
             newCode.Document = flowDoc;
         }
 
+        /**
+         * 
+         * 设置 RichTextBox 文本数据
+         */
+        public static void appendStr(RichTextBox newCode, string text)
+        {
+            FlowDocument flowDoc = newCode.Document;
+            Paragraph paragraph = new Paragraph();
+            Run r = new Run(text);
+            paragraph.Inlines.Add(r);
+            flowDoc.Blocks.Add(paragraph);
+        }
+
+
+
     }
 }

@@ -8,7 +8,7 @@
              d:DesignHeight="38" d:DesignWidth="140">
     <Grid>
         <Menu>
-            <MenuItem x:Name="menuItem" Header="{Binding Header}" Width="140" Padding="30 0 0 0" Margin="0" FontSize="12" Click="menuClick" Height="38" Background="#FFF" Foreground="Black" BorderBrush="White" />
+            <MenuItem x:Name="menuItem" Header="{Binding Header}" Width="140" Padding="20 0 0 0" Margin="0" FontSize="12" Click="menuClick" Height="38" Background="#FFF" Foreground="Black" BorderBrush="White" />
         </Menu>
     </Grid>
 </UserControl>

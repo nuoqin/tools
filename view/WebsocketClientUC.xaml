@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="code_tools.view.WebsocketClientUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:code_tools.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" RenderTransformOrigin="0.533,0.378">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" x:Name="url" Style="{StaticResource commonInput}" HorizontalAlignment="Left" Margin="20,20,0,20" Width="161"></TextBox>
+            <Button Grid.Row="0" Width="60"  x:Name="close" Content="关闭" Style="{StaticResource commonBtn}" HorizontalAlignment="Left"  Click="closeConnect" Margin="275,20,0,20" BorderBrush="{x:Null}"/>
+            <Button Grid.Row="0" x:Name="connectBtn" Width="60"  Content="连接" Style="{StaticResource commonBtn}" HorizontalAlignment="Left"  Click="connect" Margin="200,20,0,20" BorderBrush="{x:Null}"/>
+            <Label Grid.Row="1" Content="发送内容" Height="30" Width="230"  Margin="20,0,0,0" FontWeight="Bold"  Background="{x:Null}" VerticalAlignment="Top"  BorderBrush="#FF73ACEC" HorizontalAlignment="Left" />
+            <TextBox Grid.Row="1" x:Name="sendText" HorizontalAlignment="Left"  Margin="20,30,0,207" Width="315" Height="NaN"/>
+            <Button  Grid.Row="1" x:Name="sender" Content="发送" Style="{StaticResource commonBtn}" HorizontalAlignment="Left" Margin="20,210,0,124" Click="send"  Width="315" BorderBrush="{x:Null}"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Label Content="消息窗口" Height="30" Width="230"  FontWeight="Bold"  Background="{x:Null}" VerticalAlignment="Top" Margin="0,28,0,0" HorizontalAlignment="Center" BorderBrush="#FF73ACEC" ></Label>
+            <RichTextBox BorderThickness="1" x:Name="newCode"  FontSize="14"  SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="Black" Background="White" Margin="10,58,10,123"  ScrollViewer.CanContentScroll="True" Height="350" Width="230" >
+                <FlowDocument>
+                    <Paragraph></Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+
+    </Grid>
+</UserControl>
