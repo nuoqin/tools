@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="code_tools.view.JSONFormatUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:code_tools.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox
+            Height="443" x:Name="sourceCode"
+            FontSize="14"
+            VerticalAlignment="Top" SelectionBrush="#FFFFFDFD" SelectionTextBrush="{x:Null}" BorderBrush="#FFF9F6F6" Background="White" Margin="10"
+                />
+        <Button 
+                 Grid.Column="1" 
+                ToolTip="格式化" Click="format" HorizontalAlignment="Center" Style="{StaticResource commonBtn}" Margin="0,147,0,265">
+            <TextBlock Text="格式化" />
+        </Button>
+        <Button Grid.Column="1" Style="{StaticResource commonBtn}" 
+            Content="生成JAVA类" Click="createJava" Margin="5,232,1,180" />
+        <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="10" Margin="10" Padding="10" BorderBrush="#FF0270C1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
+            <RichTextBox BorderThickness="0" x:Name="newCode"  Grid.Column="2" FontSize="14"  SelectionBrush="#FFFFFDFD" SelectionTextBrush="{x:Null}" BorderBrush="#FFF9F6F6" Background="White" >
+                <FlowDocument>
+                    <Paragraph></Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Border>
+
+    </Grid>
+</UserControl>
