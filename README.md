@@ -1,8 +1,11 @@
 # tools
-开发工具箱子，目前支持日期、json格式化、json转java对象、md5加密、base64编解码、URL编解码
+开发工具箱，目前支持日期、json格式化、json转java对象、md5加密、base64编解码、URL编解码
 
 
 ![image](https://github.com/nuoqin/tools/assets/45343280/ac99cefc-b1b2-47a5-ad13-cf4ce32c29c7)
+## 0.0.2版本内容
+### 添加websocket客户端
+![image](https://github.com/nuoqin/tools/assets/45343280/07d5787b-d041-492b-a228-3e17da07b1f1)
 
 
 ## 0.0.1版本内容
