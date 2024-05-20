@@ -27,15 +27,15 @@
                 <Button  Grid.RowSpan="2" Grid.Column="1" Grid.Row="0"
                   Content="格式化"
                   HorizontalAlignment="Right"  Click="Button_Click" Style="{StaticResource commonBtn}" Margin="0,20,20,22" />
-                <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="2" x:Name="datetimeBox" Style="{StaticResource commonInput}" HorizontalAlignment="Left" Margin="5,0,0,0" IsReadOnly="True"  />
+                <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="2" x:Name="datetimeBox" Style="{StaticResource commonInput}" HorizontalAlignment="Left" Margin="5,0,0,0"   />
                 <Label Grid.Column="0" Grid.Row="2" Content="日期和时间" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="3" x:Name="dateBox" Style="{StaticResource commonInput}" Margin="5,0,0,0" HorizontalAlignment="Left" IsReadOnly="True"   />
+                <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="3" x:Name="dateBox" Style="{StaticResource commonInput}" Margin="5,0,0,0" HorizontalAlignment="Left"    />
                 <Label Grid.Column="0"  Grid.Row="3" Content="日期" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
-                <TextBox  Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="4" x:Name="timeBox" Style="{StaticResource commonInput}"  Margin="5,0,0,0" HorizontalAlignment="Left" IsReadOnly="True"   />
+                <TextBox  Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="4" x:Name="timeBox" Style="{StaticResource commonInput}"  Margin="5,0,0,0" HorizontalAlignment="Left"    />
                 <Label Grid.Column="0" Grid.Row="4" Content="时间" HorizontalAlignment="Right" Margin="0,6,0,0" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="5" x:Name="tsMs" Style="{StaticResource commonInput}"  Margin="5,0,0,0" HorizontalAlignment="Left" IsReadOnly="True"   />
+                <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="5" x:Name="tsMs" Style="{StaticResource commonInput}"  Margin="5,0,0,0" HorizontalAlignment="Left"    />
                 <Label  Grid.Column="0" Grid.Row="5" Content="毫秒时间戳" HorizontalAlignment="Right" Margin="0,6,0,0" VerticalAlignment="Center"/>
-                <TextBox  Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="6" x:Name="tsSs" Style="{StaticResource commonInput}"  Margin="5,0,0,0" HorizontalAlignment="Left" IsReadOnly="True"   />
+                <TextBox  Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="6" x:Name="tsSs" Style="{StaticResource commonInput}"  Margin="5,0,0,0" HorizontalAlignment="Left"    />
                 <Label  Grid.Column="0" Grid.Row="6" Content="秒时间戳" HorizontalAlignment="Right" Margin="0,6,0,0" VerticalAlignment="Center" />
             </Grid>
         </Grid>

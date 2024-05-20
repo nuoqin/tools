@@ -25,7 +25,7 @@
         <Button Grid.Column="1" Style="{StaticResource commonBtn}" 
             Content="生成JAVA类" Click="createJava" Margin="5,232,1,180" />
         <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="10" Margin="10" Padding="10" BorderBrush="#FF0270C1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
-            <RichTextBox BorderThickness="0" x:Name="newCode"  Grid.Column="2" FontSize="14"  SelectionBrush="#FFFFFDFD" SelectionTextBrush="{x:Null}" BorderBrush="#FFF9F6F6" Background="White" >
+            <RichTextBox BorderThickness="0" x:Name="newCode"  Grid.Column="2" FontSize="14"  SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" BorderBrush="#FFF9F6F6" Background="White" >
                 <FlowDocument>
                     <Paragraph></Paragraph>
                 </FlowDocument>

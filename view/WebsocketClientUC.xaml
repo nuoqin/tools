@@ -27,7 +27,7 @@
 
         <Grid Grid.Column="1">
             <Label Content="消息窗口" Height="30" Width="230"  FontWeight="Bold"  Background="{x:Null}" VerticalAlignment="Top" Margin="0,28,0,0" HorizontalAlignment="Center" BorderBrush="#FF73ACEC" ></Label>
-            <RichTextBox BorderThickness="1" x:Name="newCode"  FontSize="14"  SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="Black" Background="White" Margin="10,58,10,123"  ScrollViewer.CanContentScroll="True" Height="350" Width="230" >
+            <RichTextBox  x:Name="newCode"  FontSize="14"  SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="Gainsboro" Background="White" Margin="10,58,10,123"  ScrollViewer.CanContentScroll="True" Height="350" Width="230" >
                 <FlowDocument>
                     <Paragraph></Paragraph>
                 </FlowDocument>

@@ -102,6 +102,10 @@
     <Compile Include="utils\JSONUtils.cs" />
     <Compile Include="utils\MD5Util.cs" />
     <Compile Include="utils\TextUtils.cs" />
+    <Compile Include="utils\YamlUtils.cs" />
+    <Compile Include="view\YamlUC.xaml.cs">
+      <DependentUpon>YamlUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\UrlUC.xaml.cs">
       <DependentUpon>UrlUC.xaml</DependentUpon>
     </Compile>
@@ -142,6 +146,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="view\YamlUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="view\UrlUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -28,7 +28,7 @@
             <TextBlock Text="encode" />
         </Button>
         <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="10" Margin="10" Padding="10" BorderBrush="#FF0270C1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
-            <RichTextBox BorderThickness="0" x:Name="newCode" Height="414" IsReadOnly="True" Grid.Column="2" FontSize="14" Margin="0,0,0,19" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="White" Background="#FFFBF9F9" >
+            <RichTextBox BorderThickness="0" x:Name="newCode" Height="414"  Grid.Column="2" FontSize="14" Margin="0,0,0,19" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" BorderBrush="White" Background="#FFFBF9F9" >
                 <FlowDocument>
                     <Paragraph></Paragraph>
                 </FlowDocument>

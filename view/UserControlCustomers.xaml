@@ -15,11 +15,38 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Margin="5" Grid.Column="0" Background="#FFC5C5C5" VerticalAlignment="Stretch" CornerRadius="12"/>
-        <Border Margin="5" Grid.Column="1" Background="#FF7C54A0" VerticalAlignment="Stretch" CornerRadius="12"/>
-        <Border Margin="5" Grid.Column="2" Background="#FF83CD80" VerticalAlignment="Stretch" CornerRadius="12"/>
-        <Border Margin="5" Grid.Column="3" Background="#FFEE9246" VerticalAlignment="Stretch" CornerRadius="12"/>
+        <Border Margin="5" Grid.Column="0" Background="#FFC5C5C5" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="MD5" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
+        <Border Margin="5" Grid.Column="1" Background="#FF7C54A0" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="JSON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
+        <Border Margin="5" Grid.Column="2" Background="#FF83CD80" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="日期" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
+        <Border Margin="5" Grid.Column="3" Background="#FFEE9246" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="base64" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
+
+        <Border Margin="5" Grid.Row="1" Grid.Column="0" Background="#FFEE9246" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="websocket" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
+
+        <Border Margin="5" Grid.Row="1" Grid.Column="1" Background="#FF83CD80" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="URL编解码" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
+
+        <Grid  Grid.Row="2" Grid.ColumnSpan="4">
+            <StackPanel>
+                <Label Content="      作者：nuoqing"></Label>
+                <Label Content="      地址：https://github.com/nuoqin/tools"></Label>
+                <Label Content="      本项目主要是在windows环境，用于开发人员和 IT 人员的有用工具。"></Label>
+            </StackPanel>
+            
+        </Grid>
+        
     </Grid>
 </UserControl>
