@@ -89,6 +89,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="YamlDotNet, Version=15.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <HintPath>packages\YamlDotNet.15.1.4\lib\net47\YamlDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -96,12 +99,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="model\GenerateClass.cs" />
+    <Compile Include="model\YamlNode.cs" />
     <Compile Include="utils\Base64Utils.cs" />
     <Compile Include="utils\DateUtil.cs" />
     <Compile Include="utils\HttpUtils.cs" />
     <Compile Include="utils\JSONUtils.cs" />
     <Compile Include="utils\MD5Util.cs" />
     <Compile Include="utils\TextUtils.cs" />
+    <None Include="utils\YamlUtils.cs.bak" />
     <Compile Include="utils\YamlUtils.cs" />
     <Compile Include="view\YamlUC.xaml.cs">
       <DependentUpon>YamlUC.xaml</DependentUpon>

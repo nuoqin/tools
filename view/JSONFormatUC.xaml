@@ -15,7 +15,7 @@
         <TextBox
             Height="443" x:Name="sourceCode"
             FontSize="14"
-            VerticalAlignment="Top" SelectionBrush="#FFFFFDFD" SelectionTextBrush="{x:Null}" BorderBrush="#FFF9F6F6" Background="White" Margin="10"
+            VerticalAlignment="Top"  SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" BorderBrush="#FFF9F6F6" Background="White" Margin="10" TextWrapping="Wrap"
                 />
         <Button 
                  Grid.Column="1" 
