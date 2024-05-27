@@ -1,6 +1,10 @@
 # tool.
-    此开发工具箱基于WPF制作。目前支持日期工具、json格式化、json转java对象、md5加密、base64编解码、URL编解码、websocket客户端、yaml工具、XML转json、二维码生成和打印。
-希望可以帮助到您！
+本项目基于C# WPF制作。
+本项目主要是想在有无网络的情况下，也能使用。就在空闲的时候写了小工具。
+
+目前本项目支持日期工具、json格式化、json转java对象、md5加密、base64编解码、
+URL编解码、websocket客户端、yaml工具、XML转json、二维码生成和打印。
+希望这个小小的工具可以帮助到各位大佬！哪怕是一点点。
 ![image](https://github.com/nuoqin/tools/assets/45343280/c10301a8-3402-4bd8-addd-7a1d32546931)
 
 ## 0.0.4版本内容
