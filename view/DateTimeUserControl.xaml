@@ -23,10 +23,10 @@
                     <RowDefinition MinHeight="60"></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBox Grid.RowSpan="2" Style="{StaticResource commonInput}"
-                        x:Name="source"  FontSize="14"  Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" Margin="40,20,0,22" Width="385" IsReadOnly="False"  />
+                        x:Name="source"  FontSize="14"  Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" Margin="40,20,0,22" Width="345" IsReadOnly="False"  />
                 <Button  Grid.RowSpan="2" Grid.Column="1" Grid.Row="0"
                   Content="格式化"
-                  HorizontalAlignment="Right"  Click="Button_Click" Style="{StaticResource commonBtn}" Margin="0,20,20,22" />
+                  HorizontalAlignment="Right"  Click="Button_Click" Style="{StaticResource commonBtn}" Margin="0,20,69,22" />
                 <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="2" x:Name="datetimeBox" Style="{StaticResource commonInput}" HorizontalAlignment="Left" Margin="5,0,0,0"   />
                 <Label Grid.Column="0" Grid.Row="2" Content="日期和时间" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <TextBox Grid.Column="1" TextBlock.LineHeight="32" FontSize="14" Grid.Row="3" x:Name="dateBox" Style="{StaticResource commonInput}" Margin="5,0,0,0" HorizontalAlignment="Left"    />

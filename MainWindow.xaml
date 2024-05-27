@@ -13,14 +13,14 @@
         </Grid.ColumnDefinitions>
         <Grid HorizontalAlignment="Stretch" Grid.Column="0" >
             <ScrollViewer HorizontalAlignment="Stretch"  VerticalScrollBarVisibility="Auto">
-                <Border Background="#FFFFFF" Grid.Column="1" Margin="0 5 0 0" CornerRadius="5">
+                <Border Background="#FFFFFF" Grid.Column="1" Margin="0 5 0 5" CornerRadius="5">
                     <StackPanel Margin="5" x:Name="leftMenu">
                         
                     </StackPanel>
                 </Border>
             </ScrollViewer>
         </Grid>
-        <Border Background="#FFFFFF" Grid.Column="1" Margin="5 5 5 0" CornerRadius="5">
+        <Border Background="#FFFFFF" Grid.Column="1" Margin="5 5 5 5" CornerRadius="5">
             <StackPanel x:Name="main"  HorizontalAlignment="Stretch">
                
             </StackPanel>

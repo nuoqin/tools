@@ -18,9 +18,9 @@ namespace code_tools.view
     /// <summary>
     /// UserControlCustomers.xaml 的交互逻辑
     /// </summary>
-    public partial class UserControlCustomers : UserControl
+    public partial class HomeUC : UserControl
     {
-        public UserControlCustomers()
+        public HomeUC()
         {
             InitializeComponent();
         }

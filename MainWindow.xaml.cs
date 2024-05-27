@@ -1,4 +1,5 @@
 ﻿using code_tools.model;
+using code_tools.utils;
 using code_tools.view;
 using System;
 using System.Collections.Generic;
@@ -31,23 +32,8 @@ namespace code_tools
         public MainWindow()
         {
             InitializeComponent();
-            var item1 = new ItemMenu("首页", new UserControlCustomers());
-            var item2 = new ItemMenu("日期工具", new DateTimeUserControl());
-            var item3 = new ItemMenu("JSON工具", new JSONFormatUC());
-            var item5 = new ItemMenu("MD5加密", new MD5UC());
-            var item6 = new ItemMenu("BASE64编解码", new Base64UC());
-            var item7 = new ItemMenu("URL编解码", new UrlUC());
-            var item8 = new ItemMenu("websocket", new WebsocketClientUC());
-            var yaml = new ItemMenu("yaml工具", new YamlUC());
-            leftMenu.Children.Add(new UserControlMenuItem(item1, this));
-            leftMenu.Children.Add(new UserControlMenuItem(item2, this));
-            leftMenu.Children.Add(new UserControlMenuItem(item3, this));
-            leftMenu.Children.Add(new UserControlMenuItem(item5, this));
-            leftMenu.Children.Add(new UserControlMenuItem(item6, this));
-            leftMenu.Children.Add(new UserControlMenuItem(item7, this));
-            leftMenu.Children.Add(new UserControlMenuItem(item8, this));
-            leftMenu.Children.Add(new UserControlMenuItem(yaml, this));
-            SwitchScreen(new UserControlCustomers());
+            MenuUtils.initMenus(leftMenu, this);
+            SwitchScreen(new HomeUC());
         }
 
         internal void SwitchScreen(object sender){

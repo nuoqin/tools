@@ -13,13 +13,11 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" BorderThickness="1" CornerRadius="10"  Margin="10" Padding="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="#FF0270C1" Background="#FFF9F9F9">
-            <TextBox
-                Height="414" x:Name="sourceCode"
+        <TextBox  
+                Height="440" x:Name="sourceCode"
                 FontSize="14"
-                VerticalAlignment="Top"  Background="#FFFDFDFD" BorderBrush="#FFFBFBFB" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" TextWrapping="Wrap"
+                VerticalAlignment="Center"  Background="#FFFDFDFD" BorderThickness="1" BorderBrush="#FF1772C7" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" TextWrapping="Wrap" Margin="10,0,10,0" Width="NaN"
                  />
-        </Border>
         <Button  Grid.Column="1" 
                 ToolTip="decode" Click="decode" HorizontalAlignment="Center" Margin="0,132,0,268" Style="{StaticResource commonBtn}">
             <TextBlock Text="decode" />
@@ -27,8 +25,9 @@
         <Button  Grid.Column="1" Click="encode"  Style="{StaticResource commonBtn}" HorizontalAlignment="Center" Margin="0,225,0,175">
             <TextBlock Text="encode" />
         </Button>
-        <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="10" Margin="10" Padding="10" BorderBrush="#FF0270C1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
-            <RichTextBox BorderThickness="0" x:Name="newCode" Height="414"  Grid.Column="2" FontSize="14" Margin="0,0,0,19" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" BorderBrush="White" Background="#FFFBF9F9" >
+        <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="5" Margin="5" Padding="5" BorderBrush="#FF0270C1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
+            <RichTextBox BorderThickness="0" x:Name="newCode"  Grid.Column="2" FontSize="14" Margin="0,-1,0,-1" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" BorderBrush="White" Background="White" Height="410" 
+                         ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" UseLayoutRounding="True" >
                 <FlowDocument>
                     <Paragraph></Paragraph>
                 </FlowDocument>

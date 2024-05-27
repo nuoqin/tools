@@ -37,6 +37,7 @@ namespace code_tools.view
         private async void closeConnect(object sender, RoutedEventArgs e)
         {
             url.IsReadOnly = true;
+            
             connectBtn.IsEnabled = true;
             await client.CloseAsync(WebSocketCloseStatus.NormalClosure, "1", token);
         }
@@ -54,6 +55,7 @@ namespace code_tools.view
             var ws = url.Text;
             client = new ClientWebSocket();
             url.IsReadOnly = false;
+            
             try
             {
                 token = new CancellationToken();
@@ -62,6 +64,8 @@ namespace code_tools.view
                 await client.ConnectAsync(new Uri(ws), token);
                 while (client.State == WebSocketState.Open)
                 {
+                    connectBtn.IsEnabled = true;
+                    senderBtn.IsEnabled = false;
                     var result = new byte[1024];
                     await client.ReceiveAsync(new ArraySegment<byte>(result), token);
                     var receiveMsg = Encoding.UTF8.GetString(result, 0, result.Length);
