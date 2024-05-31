@@ -47,6 +47,9 @@
         <Border Margin="5" Grid.Row="1" Grid.Column="3" Background="#FF54A089" VerticalAlignment="Stretch" CornerRadius="12">
             <Label Content="二维码工具" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
         </Border>
+        <Border Margin="5" Grid.Row="1" Grid.Column="4" Background="#FF5490A0" VerticalAlignment="Stretch" CornerRadius="12">
+            <Label Content="内网工具" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFBF5F5"></Label>
+        </Border>
         <Grid  Grid.Row="2" Grid.ColumnSpan="5">
             <StackPanel>
                 <Label Content="      作者：nuoqing"></Label>

@@ -16,7 +16,7 @@ namespace code_tools.utils
          */
         public static string getStr(RichTextBox source) {
             TextRange documentTextRange = new TextRange(source.Document.ContentStart, source.Document.ContentEnd);
-            return documentTextRange.Text;
+            return documentTextRange.Text.Trim();
         }
 
 

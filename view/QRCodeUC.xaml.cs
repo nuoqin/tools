@@ -39,19 +39,7 @@ namespace code_tools.view
             try
             {
                 string text = TextUtils.getStr(sourceCode);
-                QRCodeGenerator qrGenerator = new QRCodeGenerator();
-                QRCodeData qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
-                PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
-
-                var bytes = qrCode.GetGraphic(120);
-
-                bitmapImage = new BitmapImage();
-
-                bitmapImage.BeginInit();
-                bitmapImage.StreamSource = new MemoryStream(bytes);
-                bitmapImage.EndInit();
-
-                qrCodeImage.Source = bitmapImage;
+                generateQRCode(text);
             }
             catch (Exception ex)
             {
@@ -61,6 +49,22 @@ namespace code_tools.view
 
         }
 
+        private void generateQRCode(string text)
+        {
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
+            PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
+
+            var bytes = qrCode.GetGraphic(120);
+
+            bitmapImage = new BitmapImage();
+
+            bitmapImage.BeginInit();
+            bitmapImage.StreamSource = new MemoryStream(bytes);
+            bitmapImage.EndInit();
+
+            qrCodeImage.Source = bitmapImage;
+        }
 
         private void print(object sender, RoutedEventArgs e)
         {
@@ -87,6 +91,31 @@ namespace code_tools.view
             }
 
 
+        }
+
+        private void generateWife(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string text = TextUtils.getStr(sourceCode);
+
+                var wifeStr= text.Split(new char[] { ' ', });
+
+                if (wifeStr.Length != 2) {
+                    MessageBox.Show("请输入wife名称和密码，用空格隔开", "错误");
+                    return;
+                }
+                var str = "WIFI:S:";
+                str += wifeStr[0];
+                str += ";T:WPA;P:";
+                str += wifeStr[1];
+                str += ";";
+                generateQRCode(str);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "错误");
+            }
         }
     }
 }

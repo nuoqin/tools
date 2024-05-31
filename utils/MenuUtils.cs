@@ -23,8 +23,10 @@ namespace code_tools.utils
             var base64 = new ItemMenu("BASE64编解码", new Base64UC());
             var url = new ItemMenu("URL编解码", new UrlUC());
             var pdf = new ItemMenu("二维码工具", new QRCodeUC());
+            var net = new ItemMenu("内网工具", new NetUc());
             var item8 = new ItemMenu("websocket", new WebsocketClientUC());
             leftMenu.Children.Add(new UserControlMenuItem(home, window));
+            leftMenu.Children.Add(new UserControlMenuItem(net, window));
             leftMenu.Children.Add(new UserControlMenuItem(date, window));
             leftMenu.Children.Add(new UserControlMenuItem(json, window));
             leftMenu.Children.Add(new UserControlMenuItem(xmlMenu, window));

@@ -21,12 +21,12 @@
                 />
         <Button 
                Style="{StaticResource commonBtn}" Grid.Column="1"
-                ToolTip="生成" Click="generate" HorizontalAlignment="Right" Margin="0,167,6,245">
+                ToolTip="生成" Click="generate" HorizontalAlignment="Right" Margin="0,160,6,245">
             <TextBlock Text="生成" />
         </Button>
         <Button 
             Style="{StaticResource commonBtn}" Grid.Column="1"
-            ToolTip="打印" Click="print" HorizontalAlignment="Left" Margin="1,250,0,142">
+            ToolTip="打印" Click="print" HorizontalAlignment="Left" Margin="0,280,0,132">
             <TextBlock Text="打印" />
         </Button>
         <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="5" Margin="5" Padding="5" BorderBrush="#FFBCBFC1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
@@ -34,6 +34,12 @@
                 <Image Width="200" Height="200" x:Name="qrCodeImage" />
             </Border>
         </Border>
+        <Button 
+            Style="{StaticResource commonBtn}" Grid.Column="1"
+            ToolTip="生成无线网络连接" Click="generateWife" HorizontalAlignment="Left" Margin="0,221,0,191">
+            <TextBlock Text="无线网络连接" />
+        </Button>
+
 
     </Grid>
 </UserControl>
