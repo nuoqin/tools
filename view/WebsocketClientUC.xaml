@@ -18,7 +18,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBox Grid.Row="0" x:Name="url" Style="{StaticResource commonInput}" HorizontalAlignment="Center" Margin="0,20,0,0" Width="280" VerticalAlignment="Top"></TextBox>
-            <Button Width="115"  x:Name="close"  Content="关闭" Style="{StaticResource commonBtn}" HorizontalAlignment="Left"  Click="closeConnect" Margin="175,66,0,0" BorderBrush="{x:Null}" VerticalAlignment="Top"/>
+            <Button Width="115"  x:Name="close"  Content="关闭" Style="{StaticResource commonBtn}" HorizontalAlignment="Left"  Click="closeConnect" Margin="175,70,0,0" BorderBrush="{x:Null}" VerticalAlignment="Top"/>
             <Button x:Name="connectBtn" Width="115"  Content="连接" Style="{StaticResource commonBtn}"  Click="connect" Margin="10,66,0,10" BorderBrush="{x:Null}" HorizontalAlignment="Left"/>
             <Label Grid.Row="1" Content="发送内容" Height="30" Width="230"  Margin="10,19,0,0" FontWeight="Bold"  Background="{x:Null}" VerticalAlignment="Top"  BorderBrush="#FF73ACEC" HorizontalAlignment="Left" />
             <TextBox Grid.Row="1" x:Name="sendText" HorizontalAlignment="Center"  Margin="0,54,0,72" Width="280" Height="NaN" TextWrapping="Wrap" AcceptsReturn="True" />

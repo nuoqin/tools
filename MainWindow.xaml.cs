@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 
 namespace code_tools
 {
+
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
@@ -28,6 +29,8 @@ namespace code_tools
 
         //上一个
         ItemMenu lastItemMenu;
+
+        private static bool isOpen = false;
 
         public MainWindow()
         {

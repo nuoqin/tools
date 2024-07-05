@@ -40,9 +40,17 @@ namespace code_tools.view
                 datetimeBox.Text = DateUtil.toDateStr(dateStr);
                 timeBox.Text = DateUtil.toTimeStr(dateStr);
             }catch(Exception ex) {
-                tsMs.Text = DateUtil.toTimeStampMs(dateStr);
-                tsSs.Text = DateUtil.toTimeStampS(dateStr);
+                try{
+                    tsMs.Text = DateUtil.toTimeStampMs(dateStr);
+                    tsSs.Text = DateUtil.toTimeStampS(dateStr);
+                }
+                catch (Exception exce)
+                {
+                    MessageBox.Show(exce.Message, "格式化错误");
+                }
             }
         }
+
+        
     }
 }

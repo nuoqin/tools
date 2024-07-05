@@ -32,19 +32,24 @@ namespace code_tools.view
         public WebsocketClientUC()
         {
             InitializeComponent();
+            close.IsEnabled = false;
+            senderBtn.IsEnabled = false;
         }
 
         private async void closeConnect(object sender, RoutedEventArgs e)
         {
             url.IsReadOnly = true;
-            
             connectBtn.IsEnabled = true;
+            senderBtn.IsEnabled = false;
             await client.CloseAsync(WebSocketCloseStatus.NormalClosure, "1", token);
         }
 
         private void send(object sender, RoutedEventArgs e)
         {
             string msg = sendText.Text;
+            if (string.IsNullOrEmpty(msg)) {
+                return;
+            }
             var result = Encoding.UTF8.GetBytes(msg);
             client.SendAsync(new ArraySegment<byte>(result), WebSocketMessageType.Text, true, token);
             sendText.Text = "";
@@ -55,17 +60,18 @@ namespace code_tools.view
             var ws = url.Text;
             client = new ClientWebSocket();
             url.IsReadOnly = false;
-            
+            if (ws == null || !ws.StartsWith("ws")) {
+                MessageBox.Show("错误的链接，请输入ws://或者wss://开头的链接", "连接错误");
+            }
             try
             {
                 token = new CancellationToken();
-                connectBtn.Background = new SolidColorBrush(Colors.Gray);
-                connectBtn.IsEnabled = false;
                 await client.ConnectAsync(new Uri(ws), token);
                 while (client.State == WebSocketState.Open)
                 {
                     connectBtn.IsEnabled = true;
                     senderBtn.IsEnabled = false;
+                    senderBtn.IsEnabled = true;
                     var result = new byte[1024];
                     await client.ReceiveAsync(new ArraySegment<byte>(result), token);
                     var receiveMsg = Encoding.UTF8.GetString(result, 0, result.Length);
@@ -75,6 +81,8 @@ namespace code_tools.view
             catch (Exception ex)
             {
                 MessageBox.Show("连接失败", "error");
+               connectBtn.IsEnabled = true;
+
             }
         }
     }

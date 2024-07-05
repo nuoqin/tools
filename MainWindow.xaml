@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:code_tools"
-        mc:Ignorable="d" Icon="assert/icon.ico"
-        Title="编程工具助手" Height="550" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#e8edf4">
+        mc:Ignorable="d" Icon="assert/tools.png"
+        Title=" 编程工具助手" Height="550" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#e8edf4">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>

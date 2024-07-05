@@ -8,38 +8,39 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" ></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
-        <TextBox
-            Height="430" x:Name="sourceCode"
-            FontSize="14"
-            VerticalAlignment="Center" Background="White"  BorderThickness="1" BorderBrush="#FF1772C7" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" TextWrapping="Wrap" AcceptsReturn="True" Margin="10,0,10,0" Width="NaN"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button 
+               Style="{StaticResource commonBtn}"
+                Content="生成" Click="generate" HorizontalAlignment="Left" Margin="10,5">
+        </Button>
+        <Button 
+            Style="{StaticResource commonBtn}"
+            Content="生成无线密码" Click="generateWife" HorizontalAlignment="Left" Margin="110,5">
+        </Button>
+        <Button 
+            Style="{StaticResource commonBtn}"
+            Content="打印" Click="print" HorizontalAlignment="Left" Margin="210,5">
+        </Button>
+        
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox
+            Height="410" x:Name="sourceCode"
+            FontSize="12"
+            VerticalAlignment="Center" Background="White"  BorderThickness="1" BorderBrush="#FF1772C7" SelectionBrush="#FF1772C7" SelectionTextBrush="#FFF9F9F9" TextWrapping="Wrap" AcceptsReturn="True" Margin="10,5" Width="NaN"
                 />
-        <Button 
-               Style="{StaticResource commonBtn}" Grid.Column="1"
-                ToolTip="生成" Click="generate" HorizontalAlignment="Right" Margin="0,160,6,245">
-            <TextBlock Text="生成" />
-        </Button>
-        <Button 
-            Style="{StaticResource commonBtn}" Grid.Column="1"
-            ToolTip="打印" Click="print" HorizontalAlignment="Left" Margin="0,280,0,132">
-            <TextBlock Text="打印" />
-        </Button>
-        <Border Grid.Column="2"  BorderThickness="1"  CornerRadius="5" Margin="5" Padding="5" BorderBrush="#FFBCBFC1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
-            <Border Width="240" Height="240" BorderThickness="1" BorderBrush="#FFB4B5B5">
-                <Image Width="200" Height="200" x:Name="qrCodeImage" />
+            <Border Grid.Column="1"  BorderThickness="1"  CornerRadius="5" Margin="5" Padding="5" BorderBrush="#FFBCBFC1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
+                <Border Width="240" Height="240" BorderThickness="1" BorderBrush="#FFB4B5B5">
+                    <Image Width="200" Height="200" x:Name="qrCodeImage" />
+                </Border>
             </Border>
-        </Border>
-        <Button 
-            Style="{StaticResource commonBtn}" Grid.Column="1"
-            ToolTip="生成无线网络连接" Click="generateWife" HorizontalAlignment="Left" Margin="0,221,0,191">
-            <TextBlock Text="无线网络连接" />
-        </Button>
-
-
+        </Grid>
     </Grid>
 </UserControl>

@@ -21,9 +21,9 @@ namespace code_tools.view
     /// <summary>
     /// JSONFormatUC.xaml 的交互逻辑
     /// </summary>
-    public partial class YamlUC : UserControl
+    public partial class Encipher : UserControl
     {
-        public YamlUC()
+        public Encipher()
         {
             InitializeComponent();
         }
@@ -32,26 +32,10 @@ namespace code_tools.view
         {
             try {
                 string text = TextUtils.getStr(sourceCode);
-                TextUtils.setStr(newCode,YamlUtils.toJSONStr(text));
+                TextUtils.setStr(newCode,MD5Util.MD5Str(text));
             } catch (Exception ex){
                 MessageBox.Show(ex.Message);
             }   
-           
-        }
-
-        private void formatProp(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                string text = TextUtils.getStr(sourceCode);
-                
-                TextUtils.setStr(newCode, YamlUtils.toPropertiesStr(text));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
     }
 }

@@ -19,14 +19,16 @@ namespace code_tools.utils
             var json = new ItemMenu("JSON工具", new JSONFormatUC());
             var yaml = new ItemMenu("YAML工具", new YamlUC());
             var xmlMenu = new ItemMenu("XML工具", new XMLUC());
-            var md5 = new ItemMenu("MD5加密", new MD5UC());
+            var md5 = new ItemMenu("MD5加密", new Encipher());
             var base64 = new ItemMenu("BASE64编解码", new Base64UC());
             var url = new ItemMenu("URL编解码", new UrlUC());
             var pdf = new ItemMenu("二维码工具", new QRCodeUC());
             var net = new ItemMenu("内网工具", new NetUc());
             var item8 = new ItemMenu("websocket", new WebsocketClientUC());
+            var system = new ItemMenu("系统工具", new SystemView());
             leftMenu.Children.Add(new UserControlMenuItem(home, window));
             leftMenu.Children.Add(new UserControlMenuItem(net, window));
+            leftMenu.Children.Add(new UserControlMenuItem(system, window));
             leftMenu.Children.Add(new UserControlMenuItem(date, window));
             leftMenu.Children.Add(new UserControlMenuItem(json, window));
             leftMenu.Children.Add(new UserControlMenuItem(xmlMenu, window));

@@ -77,8 +77,7 @@ namespace tools.utils
             return targetDate;
         }
 
-        public static string toTimeStampMs(string dateStr)
-        {
+        public static string toTimeStampMs(string dateStr){
             var str = "";
             //判断是秒还是毫秒
             DateTime targetDate = DateTime.Parse(dateStr);
