@@ -58,9 +58,11 @@ nuoqin工具箱提供了一系列实用的工具，旨在帮助用户高效地�
 希望这个介绍能够帮助用户更好地了解和使用nuoqin工具箱！如果有任何其他需求或问题，请随时告诉我。
 
 ## 界面展示
-![image](https://github.com/user-attachments/assets/82520270-8d5d-438a-a0cd-00cb17989703)
+![image](https://github.com/user-attachments/assets/5470c918-372d-4271-9316-1e02c5f01228)
 
-![image](https://github.com/user-attachments/assets/0809d2ff-f196-42ae-965a-f38afeba5aa4)
+![image](https://github.com/user-attachments/assets/2c27e6b3-4b23-4077-a622-e4fcd59d9b72)
+
+![image](https://github.com/user-attachments/assets/1a643b87-a678-4382-b46f-415a52ad74f4)
 
 ![image](https://github.com/user-attachments/assets/e5d359e8-cbef-4b73-9a90-ba95417854b1)
 
