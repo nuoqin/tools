@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="CodeTools.view.SystemViewUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:CodeTools.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="1"
+                  Margin="10"
+                  materialDesign:ColorZoneAssist.Foreground="#cc3b00"
+                  materialDesign:ColorZoneAssist.Mode="Custom"
+                  materialDesign:ElevationAssist.Elevation="Dp6"
+                  Header="windows系统自带的功能清单，待补充。。。"
+                  Style="{StaticResource MaterialDesignCardGroupBox}">
+            <ItemsControl x:Name="item">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                            Height="75"
+                            Width="120"
+                             Background="#0062ff"
+                            Foreground="White"
+                            Margin="10"
+                            Click="execCommond">
+                            <TextBlock Text="{Binding Text}" TextWrapping="Wrap" TextAlignment="Center" />
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+
+        </GroupBox>
+       </Grid>
+    
+</UserControl>

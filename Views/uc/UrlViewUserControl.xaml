@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="CodeTools.view.UrlViewUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:CodeTools.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition  Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="欢迎使用URL编解码工具" FontSize="16" FontWeight="Bold" Margin="10"></TextBlock>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button  Content="解码"  Click="decode"  materialDesign:ButtonAssist.CornerRadius="5"
+                    Height="40" Background="#0062ff" Foreground="White"
+    Style="{StaticResource MaterialDesignFlatMidBgButton}" Margin="10,5" />
+            <Button  Content="编码" Click="encode" materialDesign:ButtonAssist.CornerRadius="5"
+                    Height="40" Background="#0062ff" Foreground="White"
+    Style="{StaticResource MaterialDesignFlatMidBgButton}"   Margin="5"  />
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox  
+        x:Name="sourceCode"
+        Margin="10"
+        Background="White"
+        CaretBrush="#0062ff"
+        FontSize="13"
+        BorderBrush="#0062ff"
+        materialDesign:HintAssist.Foreground="#0062ff"
+        materialDesign:HintAssist.Hint="请在此处输入需要处理的字符串"
+        AcceptsReturn="True"
+        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+        TextWrapping="Wrap" SelectionBrush="#FF0062FF" OpacityMask="#FF0062FF" 
+        VerticalScrollBarVisibility="Auto" />
+            <Border CornerRadius="5" BorderThickness="1" Margin="10" Padding="5"  Background="White"  BorderBrush="#0062ff"  Grid.Column="1">
+                <RichTextBox  x:Name="newCode" 
+              FontSize="13"  CaretBrush="#0062ff"
+              SelectionBrush="#0062ff" 
+              SelectionTextBrush="#FFF9F9F9"  
+              Background="White" 
+              ScrollViewer.VerticalScrollBarVisibility="Visible" 
+              ScrollViewer.CanContentScroll="True" 
+              Style="{StaticResource RichTextBoxScrollbar}"
+              UseLayoutRounding="True" BorderBrush="{x:Null}" >
+                </RichTextBox>
+            </Border>
+        </Grid>
+     
+
+        
+
+
+    </Grid>
+</UserControl>
