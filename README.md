@@ -42,7 +42,24 @@ nuoqin工具箱提供了一系列实用的工具，旨在帮助用户高效地�
 1. **访问首页**：点击首页按钮，快速导航至工具箱的主页面。
 
 2. **自定义工具** -提供用户自定义本地应用加入到本应用中。
+![image](https://github.com/user-attachments/assets/8d958c92-b03b-48c3-8fb6-203aaa585d2e)
+编辑：打开本地配置文件，配置文件样例如下：
 
+```
+{
+  "list":[
+     { "title":"Navicat2","description":"数据库管理软件","commond":"E:\\tools\\Navicat Premium 12\\navicat.exe"}
+  ]
+}
+
+title: 程序展示标题
+description：程序介绍
+commond：程序所在路径
+```
+
+刷新：在配置文件修改完成后，点击刷新，加载配置信息到程序内。
+
+初始化：初始化配置文件，配置文件会被修改为最初状态
    
 
 3. **密码管理**：使用密码管理工具来生成和管理安全的密码。
