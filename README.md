@@ -5,10 +5,10 @@
 
 > 感谢名单
 
-```非常感谢W测试和需求
+```
 @W
 
-非常感谢W提出的需求和需求本软件。
+非常感谢W测试和需求
 ```
 
 
@@ -42,7 +42,8 @@ nuoqin工具箱提供了一系列实用的工具，旨在帮助用户高效地�
 1. **访问首页**：点击首页按钮，快速导航至工具箱的主页面。
 
 2. **自定义工具** -提供用户自定义本地应用加入到本应用中。
-![image](https://github.com/user-attachments/assets/8d958c92-b03b-48c3-8fb6-203aaa585d2e)
+![image](https://github.com/user-attachments/assets/fdb4340d-b450-475a-b209-ab0db6179219)
+
 编辑：打开本地配置文件，配置文件样例如下：
 
 ```
@@ -114,9 +115,12 @@ commond：程序所在路径
 
 > ## 界面展示
 
-![image](https://github.com/user-attachments/assets/5470c918-372d-4271-9316-1e02c5f01228)
-![image](https://github.com/user-attachments/assets/2c27e6b3-4b23-4077-a622-e4fcd59d9b72)
-![image](https://github.com/user-attachments/assets/1a643b87-a678-4382-b46f-415a52ad74f4)
+![image](https://github.com/user-attachments/assets/5cd8dad7-d8e0-41e6-82a3-fe70acd07faa)
+
+![image](https://github.com/user-attachments/assets/e73c29b5-570b-43dd-9c52-db7993a5ba34)
+
+![image](https://github.com/user-attachments/assets/51105f3b-08b6-44f7-860b-e6cb0dbea15a)
+
 
 ## 版本更新
 
