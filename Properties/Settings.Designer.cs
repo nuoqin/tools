@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CodeTools.Properties
+namespace nuoqin.Properties
 {
 
 

@@ -1,78 +1,118 @@
-﻿using CodeTools.common.config;
-using CodeTools.view;
-using CodeTools.viewModels;
-using CodeTools.ViewModels;
-using CodeTools.ViewModels.utils;
-using CodeTools.views;
-using CodeTools.Views;
-using CodeTools.Views.uc;
-using Prism.DryIoc;
-using Prism.Ioc;
-using Prism.Mvvm;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using nuoqin.src;
+using nuoqin.src.Model;
+using nuoqin.src.Pages;
+using nuoqin.src.Services;
+using nuoqin.src.Services.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
+using System.Windows.Threading;
+using Wpf.Ui;
 
-namespace CodeTools
+namespace nuoqin
 {
     /// <summary>
     /// App.xaml 的交互逻辑
     /// </summary>
-    public partial class App : PrismApplication
+    public partial class App
     {
+        private static readonly IHost host = Host.CreateDefaultBuilder().ConfigureAppConfiguration(c =>
+        {
+            var basePath = Path.GetDirectoryName(AppContext.BaseDirectory)
+                ?? throw new DirectoryNotFoundException(
+                    "Unable to find the base directory of the application."
+                );
+            _ = c.SetBasePath(basePath);
+        }).ConfigureServices(
+          (context, services) =>
+          {
+              // App Host
+              _ = services.AddHostedService<ApplicationHostService>();
+              _ = services.AddSingleton<IWindow, MainWindow>();
+              _ = services.AddSingleton<MainWindowViewModel>();
+              _ = services.AddSingleton<INavigationService, NavigationService>();
+              _ = services.AddSingleton<ISnackbarService, SnackbarService>();
+              _ = services.AddSingleton<IContentDialogService, ContentDialogService>();
+              _ = services.AddSingleton<WindowsProviderService>();
 
-        protected override Window CreateShell()
+              // Views and ViewModels
+
+              _ = services.AddSingleton<HomePage>();
+              _ = services.AddSingleton<HomeViewModel>();
+
+              _ = services.AddSingleton<SettingsPage>();
+              _ = services.AddSingleton<SettingsViewModel>();
+
+
+              _ = services.AddSingleton<JSONPage>();
+
+              _ = services.AddSingleton<XMLPage>();
+
+              _ = services.AddSingleton<YAMLPage>();
+
+              _ = services.AddSingleton<DateTimePage>();
+
+              _ = services.AddSingleton<Md5Page>();
+
+              _ = services.AddSingleton<URLPage>();
+
+              _ = services.AddSingleton<RandomPage>();
+
+              _ = services.AddSingleton<AESPage>();
+
+              _ = services.AddSingleton<RSAPage>();
+
+              _ = services.AddSingleton<QRCodePage>();
+
+              _ = services.AddSingleton<BASE64Page>();
+
+              _ = services.AddSingleton<UnicodePage>();
+
+
+              _ = services.AddSingleton<WebSockePage>();
+
+              _ = services.AddSingleton<HttpPage>();
+
+              _ = services.AddSingleton<TextPage>();
+              _ = services.AddSingleton<TextViewModel>();
+
+              _ = services.AddSingleton<WindowsServicePage>();
+
+              _ = services.AddSingleton<PasswordManagerPage>();
+
+              _ = services.AddSingleton<LocalServicePage>();
+          }
+      )
+      .Build();
+
+
+
+        public static T GetService<T>() where T : class
         {
-            return Container.Resolve<MainWindow>();
-        }
-        /**
-         * 
-         * 初始化 
-         */
-        protected override void OnInitialized()
-        {
-            var config = App.Current.MainWindow.DataContext as IConfigure;
-            if (config != null)
-            {
-                config.conifg();
-            }
-            base.OnInitialized();
+            return host.Services.GetService<T>();
         }
 
-        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+
+        private void OnStartup(object sender, StartupEventArgs e)
         {
-            containerRegistry.RegisterForNavigation<HomeWindow, HomeViewModel>();
-            containerRegistry.RegisterForNavigation<Md5ViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<Base64ViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<DateTimeViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<LocalServiceViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<QRCodeViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<SystemViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<UrlViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<WsClientViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<YamlViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<XmlViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<JSONViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<AESViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<RsaViewUserControl, BaseViewModel>();
-            containerRegistry.RegisterForNavigation<WlanViewUserControl, WlanViewModel>();
-            containerRegistry.RegisterForNavigation<MemoUserControl, MemoViewModel>();
-            containerRegistry.RegisterForNavigation<RandomUserControl, RandomViewMode>();
-            containerRegistry.RegisterForNavigation<CodeViewUserControl, RandomViewMode>();
+            host.StartAsync();
         }
 
-        /// <summary>
-        /// 配置规则
-        /// </summary>
-        protected override void ConfigureViewModelLocator()
+
+        private async void OnExit(object sender, ExitEventArgs e)
         {
-            base.ConfigureViewModelLocator();
-            ViewModelLocationProvider.Register<MainWindow, MainWindowViewModel>();
+            await host.StopAsync();
+            host.Dispose();
         }
+
+
+        private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+        }
+
+
     }
-
 }

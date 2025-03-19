@@ -1,0 +1,760 @@
+# WIZTREE
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WizTree 3\n"
+"POT-Creation-Date: 2017-08-31 12:05\n"
+"PO-Revision-Date: 2021-09-19 18:45+1200\n"
+"Last-Translator: Dominic Dumée <webmaster@antibody-software.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Language-Team: \n"
+"Language: en\n"
+
+#: WizTreeMain.pas:673
+msgid "Scanning..."
+msgstr ""
+
+#: WizTreeMain.pas:673 WizTreeMain.pas:4286
+msgid "Folders"
+msgstr ""
+
+#: WizTreeMain.pas:673 WizTreeMain.pas:4283
+msgid "Files"
+msgstr ""
+
+#: WizTreeMain.pas:688
+msgid "Dumping file"
+msgstr ""
+
+#: WizTreeMain.pas:688 WizTreeMain.pas:953
+msgid "MB"
+msgstr ""
+
+#: WizTreeMain.pas:950
+msgid "GB"
+msgstr ""
+
+#: WizTreeMain.pas:956
+msgid "KB"
+msgstr ""
+
+#: WizTreeMain.pas:961
+msgid "Bytes"
+msgstr ""
+
+#: WizTreeMain.pas:1141
+msgid "Files in"
+msgstr ""
+
+#: WizTreeMain.pas:1143
+msgid "File in"
+msgstr ""
+
+#: WizTreeMain.pas:1691 WizTreeMain.pas:1738
+msgid "Selected Files"
+msgstr ""
+
+#: WizTreeMain.pas:1691 WizTreeMain.pas:1738 WizTreeMain.pas:3593
+msgid "Total Size"
+msgstr ""
+
+#: WizTreeMain.pas:1874 WizTreeMain.pas:1976 WizTreeMain.pas:2033
+msgid "You are about to open"
+msgstr ""
+
+#: WizTreeMain.pas:1875
+msgid "Command Prompt windows - are you sure?"
+msgstr ""
+
+#: WizTreeMain.pas:1977
+msgid "Explorer windows - are you sure?"
+msgstr ""
+
+#: WizTreeMain.pas:2034
+msgid "files - are you sure?"
+msgstr ""
+
+#. FileName := FDir;
+#. 2 = select directory
+#: WizTreeMain.pas:2147 WizTreeMain.pas:2162 WizTreeMain.pas:3041
+msgid "Select Folder"
+msgstr ""
+
+#. YMMV
+#: WizTreeMain.pas:2149
+msgid "Select"
+msgstr ""
+
+#: WizTreeMain.pas:2202
+msgid "File not found"
+msgstr ""
+
+#: WizTreeMain.pas:2326
+msgid "Error"
+msgstr ""
+
+#: WizTreeMain.pas:2351
+msgid "Sorting file list..."
+msgstr ""
+
+#: WizTreeMain.pas:2362
+msgid "Loading tree..."
+msgstr ""
+
+#: WizTreeMain.pas:2406
+msgid "Scan complete in"
+msgstr ""
+
+#: WizTreeMain.pas:2408
+msgid "seconds"
+msgstr ""
+
+#: WizTreeMain.pas:2412
+msgid "canceled"
+msgstr ""
+
+#: WizTreeMain.pas:2480
+msgid "Failed to update Windows Explorer context menu"
+msgstr ""
+
+#: WizTreeMain.pas:2560
+msgid "No MFT root found!"
+msgstr ""
+
+#. we have an update!
+#: WizTreeMain.pas:2640
+msgid "An update is available"
+msgstr ""
+
+#: WizTreeMain.pas:2641
+msgid "Click on the \"View Update\" button to learn more."
+msgstr ""
+
+#. if tag set then display error if any
+#: WizTreeMain.pas:2648
+msgid "No update found."
+msgstr ""
+
+#. if tag set then display error if any
+#: WizTreeMain.pas:2660
+msgid "Error checking for updates:"
+msgstr ""
+
+#: WizTreeMain.pas:2836
+msgid "Please restart WizTree as Administrator to dump the MFT file"
+msgstr ""
+
+#: WizTreeMain.pas:2844
+msgid "Please select an NTFS formatted drive."
+msgstr ""
+
+#: WizTreeMain.pas:2869
+msgid "Dumping MFT file, please wait..."
+msgstr ""
+
+#: WizTreeMain.pas:2880
+msgid "MFT data dump complete."
+msgstr ""
+
+#: WizTreeMain.pas:2884
+msgid "MFT data dumped to file"
+msgstr ""
+
+#: WizTreeMain.pas:2991
+msgid "64 bit"
+msgstr ""
+
+#: WizTreeMain.pas:2993
+msgid "32 bit"
+msgstr ""
+
+#: WizTreeMain.pas:3042
+msgid "MFT file"
+msgstr ""
+
+#: WizTreeMain.pas:3487
+msgid "Loading file list..."
+msgstr ""
+
+#: WizTreeMain.pas:3592
+msgid "files"
+msgstr ""
+
+#. lblTotalSpacePerc.Caption := '';
+#: WizTreeMain.pas:3636 WizTreeMain.pas:3637 WizTreeMain.pas:3658
+#: WizTreeMain.pas:3663 WizTreeMain.pas:3666 WizTreeMain.pas:3674
+#: WizTreeMain.pas:3675 WizTreeMain.pas:3677 WizTreeMain.pas:3679
+#: WizTreeMain.pas:3681 WizTreeMain.pas:4268 WizTreeMain.pas:4269
+#: WizTreeMain.pas:4270 WizTreeMain.pas:4271 WizTreeMain.pas:4272
+#: WizTreeMain.pas:4273 WizTreeMain.pas:4274
+msgid "n/a"
+msgstr ""
+
+#: WizTreeMain.pas:3648
+msgid "<Folder>"
+msgstr ""
+
+#: WizTreeMain.pas:4228
+msgid "File"
+msgstr ""
+
+#: WizTreeMain.pas:4229
+msgid "Options"
+msgstr ""
+
+#: WizTreeMain.pas:4230 WizTreeMain.pas:4260
+msgid "Scan"
+msgstr ""
+
+#: WizTreeMain.pas:4231
+msgid "New Instance"
+msgstr ""
+
+#: WizTreeMain.pas:4232
+msgid "Explore Folder"
+msgstr ""
+
+#: WizTreeMain.pas:4233
+msgid "Command Prompt Here"
+msgstr ""
+
+#: WizTreeMain.pas:4234
+msgid "Copy Path"
+msgstr ""
+
+#: WizTreeMain.pas:4235
+msgid "Delete (to Recycle Bin)"
+msgstr ""
+
+#: WizTreeMain.pas:4236
+msgid "Delete (No undelete possible)"
+msgstr ""
+
+#: WizTreeMain.pas:4237
+msgid "Dump MFT File"
+msgstr ""
+
+#: WizTreeMain.pas:4238
+msgid "Exit"
+msgstr ""
+
+#: WizTreeMain.pas:4240
+msgid "Display Dynamic values"
+msgstr ""
+
+#: WizTreeMain.pas:4241
+msgid "Display Byte values"
+msgstr ""
+
+#: WizTreeMain.pas:4242
+msgid "Display KB values"
+msgstr ""
+
+#: WizTreeMain.pas:4243
+msgid "Display MB values"
+msgstr ""
+
+#: WizTreeMain.pas:4244
+msgid "Display GB values"
+msgstr ""
+
+#: WizTreeMain.pas:4245
+msgid "Windows Explorer context menu"
+msgstr ""
+
+#: WizTreeMain.pas:4246
+msgid "Always Run as Administrator"
+msgstr ""
+
+#: WizTreeMain.pas:4248
+msgid "Language"
+msgstr ""
+
+#: WizTreeMain.pas:4250
+msgid "Restart as Administrator"
+msgstr ""
+
+#: WizTreeMain.pas:4251
+msgid "WizTree requires \"Administrator\" rights to enable high speed scanning of NTFS hard drives and to access all system files and folders. Click on the \"Restart as Administrator\" button to enable Administrator rights."
+msgstr ""
+
+#: WizTreeMain.pas:4252
+msgid "Don't show this again"
+msgstr ""
+
+#: WizTreeMain.pas:4254
+msgid "View Update"
+msgstr ""
+
+#: WizTreeMain.pas:4255
+msgid "Dismiss"
+msgstr ""
+
+#: WizTreeMain.pas:4256
+msgid "Check for updates"
+msgstr ""
+
+#: WizTreeMain.pas:4257
+msgid "Check for updates now"
+msgstr ""
+
+#: WizTreeMain.pas:4259
+msgid "Select:"
+msgstr ""
+
+#: WizTreeMain.pas:4261
+msgid "Cancel"
+msgstr ""
+
+#: WizTreeMain.pas:4262
+msgid "Ready..."
+msgstr ""
+
+#: WizTreeMain.pas:4263
+msgid "Selection:"
+msgstr ""
+
+#: WizTreeMain.pas:4264
+msgid "Total Space:"
+msgstr ""
+
+#: WizTreeMain.pas:4265
+msgid "Space Used:"
+msgstr ""
+
+#: WizTreeMain.pas:4266
+msgid "Space Free:"
+msgstr ""
+
+#: WizTreeMain.pas:4276
+msgid "Help us make WizTree better!"
+msgstr ""
+
+#: WizTreeMain.pas:4278
+msgid "Tree View"
+msgstr ""
+
+#: WizTreeMain.pas:4280
+msgid "Folder"
+msgstr ""
+
+#: WizTreeMain.pas:4281
+msgid "Percent of Parent"
+msgstr "% of Parent"
+
+#: WizTreeMain.pas:4282 WizTreeMain.pas:4307
+msgid "Size"
+msgstr ""
+
+#: WizTreeMain.pas:4284 WizTreeMain.pas:4308
+msgid "Modified"
+msgstr ""
+
+#: WizTreeMain.pas:4285 WizTreeMain.pas:4309
+msgid "Attributes"
+msgstr ""
+
+#: WizTreeMain.pas:4287
+msgid "Items"
+msgstr ""
+
+#: WizTreeMain.pas:4288 WizTreeMain.pas:4310
+msgid "Allocated"
+msgstr ""
+
+#: WizTreeMain.pas:4290
+msgid "File View"
+msgstr ""
+
+#: WizTreeMain.pas:4292
+msgid "File Search Filter:"
+msgstr ""
+
+#: WizTreeMain.pas:4293
+msgid "Clear"
+msgstr ""
+
+#: WizTreeMain.pas:4294
+msgid "Match file name only"
+msgstr ""
+
+#: WizTreeMain.pas:4295
+msgid "(Fast)"
+msgstr ""
+
+#: WizTreeMain.pas:4296
+msgid "Match entire path"
+msgstr ""
+
+#: WizTreeMain.pas:4297
+msgid "(Warning: can be slow!)"
+msgstr ""
+
+#: WizTreeMain.pas:4298
+msgid "Max files to display:"
+msgstr ""
+
+#: WizTreeMain.pas:4300
+msgid "(Selecting ALL can be very slow!)"
+msgstr ""
+
+#: WizTreeMain.pas:4301
+msgid "ALL"
+msgstr ""
+
+#: WizTreeMain.pas:4303
+msgid "Total Files:"
+msgstr ""
+
+#: WizTreeMain.pas:4305
+msgid "File Name"
+msgstr ""
+
+#: WizTreeMain.pas:4306
+msgid "Percent of Drive"
+msgstr "% of Drive"
+
+#: WizTreeMain.pas:4312
+msgid "About"
+msgstr ""
+
+#: WizTreeMain.pas:4314
+msgid "If you use WizTree commercially or you'd just like to support the freeware community then please make a donation by clicking on the Donate button at the top right of the screen. Thank you! :)"
+msgstr ""
+
+#: WizTreeMain.pas:4316
+msgid "What is WizTree?"
+msgstr ""
+
+#: WizTreeMain.pas:4317
+msgid "WizTree is the world's fastest disk space analyzer. It scans your hard drive and shows you which files and folders are using the most disk space."
+msgstr ""
+
+#: WizTreeMain.pas:4318
+msgid "It does this in the FASTEST way possible - you simply won't find any other application of this type that's quicker! Use the information WizTree provides to quickly locate and remove \"space hogs\" from your hard drive."
+msgstr ""
+
+#: WizTreeMain.pas:4320
+msgid "WARNING: Take care not to remove any files that are required for the correct operation of your PC!"
+msgstr ""
+
+#: WizTreeMain.pas:4322
+msgid "What makes WizTree so fast?"
+msgstr ""
+
+#: WizTreeMain.pas:4324
+msgid "When scanning NTFS formatted hard drives (most modern hard drives use this format), WizTree reads the hard drive's Master File Table (MFT) directly from the disk."
+msgstr ""
+
+#: WizTreeMain.pas:4325
+msgid "The MFT is a special hidden file used by the NTFS file system to keep track of all files and folders on a hard drive. Scanning for files this way completely bypasses the operating system (Windows) and provides a huge performance boost."
+msgstr ""
+
+#: WizTreeMain.pas:4327
+msgid "As of version 2.0, WizTree can now also scan non NTFS hard drives, network drives, USB drives, and individual directories."
+msgstr ""
+
+#: WizTreeMain.pas:4329
+msgid "Please visit the Antibody Software website for more great software, such as:"
+msgstr ""
+
+#: WizTreeMain.pas:4330 WizTreeMain.pas:4334
+msgid "(click for more information)"
+msgstr ""
+
+#: WizTreeMain.pas:4331
+msgid "A powerful yet easy to use web gallery downloading tool. It supports most of the popular image hosting sites (such as flickr, facebook, Google image search, imgur, deviantart etc.)."
+msgstr ""
+
+#: WizTreeMain.pas:4332
+msgid "It doesn't require any complicated setup or project files - it just works."
+msgstr ""
+
+#: WizTreeMain.pas:4335
+msgid "A keyboard enhancement utility that makes it easy to type accented and other special Unicode characters on a standard US/UK keyboard using easy to remember keyboard shortcuts."
+msgstr ""
+
+#: WizTreeMain.pas:4336
+msgid "For example, to type an à (a with grave accent), you press Ctrl+` then press a. These shortcuts work from any Windows application."
+msgstr ""
+
+#: SelectLanguage.pas:56 supportercode.pas:239
+msgid "OK"
+msgstr ""
+
+#: supportercode.pas:143
+msgid "Invalid Key - Please try again."
+msgstr ""
+
+#: supportercode.pas:144
+msgid "It is recommended that you copy and paste your supporter code."
+msgstr ""
+
+#: supportercode.pas:145
+msgid "Only use digits 0 to 9 and letters A to F."
+msgstr ""
+
+#: supportercode.pas:219 WizTreeMain.pas:6266
+msgid "Thank you for your support!"
+msgstr ""
+
+#: supportercode.pas:220
+msgid "WizTree will now restart."
+msgstr ""
+
+#: supportercode.pas:241 WizTreeMain.pas:5286
+msgid "Enter Supporter Code"
+msgstr ""
+
+#: supportercode.pas:242
+msgid "Supporter Code"
+msgstr ""
+
+#. warning dialog title
+#: uVistaTaskDialog.pas:228
+msgid "Warning"
+msgstr ""
+
+#. confirmation dialog title
+#: uVistaTaskDialog.pas:233
+msgid "Confirmation"
+msgstr ""
+
+#. information dialog title
+#: uVistaTaskDialog.pas:243
+msgid "Information"
+msgstr ""
+
+#: WizTreeMain.pas:1616
+msgid "(No Extension)"
+msgstr ""
+
+#: WizTreeMain.pas:5269
+msgid "File Type"
+msgstr ""
+
+#: WizTreeMain.pas:5272
+msgid "Percent"
+msgstr ""
+
+#: WizTreeMain.pas:5273
+msgid "Extension"
+msgstr ""
+
+#: WizTreeMain.pas:5276
+msgid "MFT Dump"
+msgstr ""
+
+#: WizTreeMain.pas:5276
+msgid "All Files"
+msgstr ""
+
+#: WizTreeMain.pas:5277
+msgid "Show Treemap"
+msgstr ""
+
+#: WizTreeMain.pas:5278
+msgid "Show File Types"
+msgstr ""
+
+#: WizTreeMain.pas:5279
+msgid "Reset tree expansion"
+msgstr ""
+
+#: WizTreeMain.pas:5281
+msgid "Select Parent"
+msgstr ""
+
+#: WizTreeMain.pas:5282
+msgid "Reselect Child"
+msgstr ""
+
+#: WizTreeMain.pas:5283
+msgid "Help support WizTree development by making a donation"
+msgstr ""
+
+#: WizTreeMain.pas:5284
+msgid "(You can hide the Donate button by making a donation)"
+msgstr ""
+
+#: WizTreeMain.pas:6883
+msgid "Show Allocated Size on Treemap"
+msgstr ""
+
+#: WizTreeMain.pas:6884
+msgid "Auto scan after making selection"
+msgstr ""
+
+#: WizTreeMain.pas:6886
+msgid "Zoom in Treemap"
+msgstr ""
+
+#: WizTreeMain.pas:6887
+msgid "Zoom out Treemap"
+msgstr ""
+
+#: exporttreemap.pas:57 WizTreeMain.pas:7193
+msgid "Save Treemap Image as .png file"
+msgstr ""
+
+#: exporttreemap.pas:58
+msgid "Save"
+msgstr ""
+
+#: exporttreemap.pas:60
+msgid "Width"
+msgstr ""
+
+#: exporttreemap.pas:61
+msgid "Height"
+msgstr ""
+
+#: exporttreemap.pas:62
+msgid "Shades of Gray (single color)"
+msgstr ""
+
+#: WizTreeMain.pas:7191
+msgid "Show Free Space on Treemap"
+msgstr ""
+
+msgid "File already exists - overwrite?"
+msgstr ""
+
+#: WizTreeMain.pas:3002 WizTreeMain.pas:3217
+msgid "Generated by"
+msgstr ""
+
+#: WizTreeMain.pas:3002 WizTreeMain.pas:3217
+msgid "You can hide this message by making a donation"
+msgstr ""
+
+#: WizTreeMain.pas:4452
+msgid "MFT Dump cancelled..."
+msgstr ""
+
+#: WizTreeMain.pas
+msgid "Export complete."
+msgstr ""
+
+#: WizTreeMain.pas:7815
+msgid "Copy file and size info to clipboard"
+msgstr ""
+
+#: WizTreeMain.pas:7816
+msgid "Export to .CSV file"
+msgstr ""
+
+msgid "Colors"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Color Blind"
+msgstr ""
+
+msgid "CSV file"
+msgstr ""
+
+msgid "Select CSV file"
+msgstr ""
+
+msgid "Failed to import CSV file"
+msgstr ""
+
+msgid "Color By"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "File Extension(s)"
+msgstr ""
+
+msgid "Export File Types to CSV file"
+msgstr ""
+
+msgid "Display TB values"
+msgstr ""
+
+msgid "TB"
+msgstr ""
+
+msgid "UI Theme"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Light"
+msgstr ""
+
+msgid "Dark"
+msgstr ""
+
+msgid "Sorry, your supporter code is only valid for versions of WizTree with version date"
+msgstr ""
+
+msgid "or earlier."
+msgstr ""
+
+msgid "This version of WizTree has version date"
+msgstr ""
+
+msgid "Please install an older version of WizTree with a suitable version date, or purchase a new supporter code."
+msgstr ""
+
+msgid "Version Date:"
+msgstr ""
+
+msgid "Supporter license"
+msgstr ""
+
+msgid "Enterprise license"
+msgstr ""
+
+#: Displayed as X user license where is number
+msgid "user license"
+msgstr ""
+
+msgid "Upgrades until:"
+msgstr ""
+
+msgid "lifetime"
+msgstr ""
+
+msgid "Supporter code not valid for this version"
+msgstr ""
+
+msgid "Select Multiple"
+msgstr ""
+
+msgid "Multiple"
+msgstr ""
+
+msgid "Add Folder"
+msgstr ""
+
+msgid "Remove Folder"
+msgstr ""
+
+msgid "is included within"
+msgstr ""
+
+msgid "They cannot both be selected."
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Select None"
+msgstr ""
+
+msgid "Lifetime"
+msgstr ""
+
+msgid "Show Folder and File Names on Treemap"
+msgstr ""

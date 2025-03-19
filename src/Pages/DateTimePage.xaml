@@ -1,0 +1,51 @@
+﻿<Page x:Class="nuoqin.src.Pages.DateTimePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:nuoqin.src.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DateTimePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="欢迎使用时间格式化工具" FontSize="16" FontWeight="Bold" Margin="5"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="20" VerticalAlignment="Center">
+            <ui:TextBox x:Name="source" Width="340" Height="40" />
+            <CheckBox x:Name="check" Content="16进制" RenderTransformOrigin="0.744,0.544"  Margin="10,0,0,0"  />
+            <Button  Click="format"  Height="40" Width="120" Content="格式化"  Margin="10,0,0,0" ToolTip="时间格式化" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="20,5">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="10" Width="70" Content="日期时间:"  VerticalAlignment="Center"/>
+                <ui:TextBox x:Name="datetimeBox" Width="250" PlaceholderText="yyyy-mm-dd HH:mm:ss" Margin="10"  Height="40" />
+                <ui:TextBox x:Name="datetime2Box" Width="250" PlaceholderText="yyyy/mm/dd HH:mm:ss" Margin="10"  Height="40" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label  Margin="10" Width="70" Content="日期:"   VerticalAlignment="Center"/>
+                <ui:TextBox x:Name="dateBox" Width="250" PlaceholderText="yyyy-mm-dd"  Margin="10"  Height="40" />
+                <ui:TextBox x:Name="date2Box" Width="250" PlaceholderText="yyyy/mm/dd" Margin="10"  Height="40"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label  Margin="10" Width="70" Content="时间:" VerticalAlignment="Center"/>
+                <ui:TextBox x:Name="timeBox" Width="250" PlaceholderText="HH:mm:ss"  Margin="10"  Height="40" />
+                <ui:TextBox x:Name="time2Box" Width="250"  PlaceholderText="hh:mm:ss"  Margin="10"  Height="40"  />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label  Margin="10" Width="70" Content="毫秒时间戳:" VerticalAlignment="Center"/>
+                <ui:TextBox x:Name="tsMs" Width="250"  PlaceholderText="00000000000"  Margin="10"  Height="40" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label  Margin="10" Width="70" Content="秒时间戳:" VerticalAlignment="Center"/>
+                <ui:TextBox x:Name="tsSs" PlaceholderText="00000000" Width="250"  Margin="10"  Height="40"  BorderBrush="#0062ff"  />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

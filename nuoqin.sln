@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nuoqin", "nuoqin.csproj", "{F0C48ED6-D134-49AF-A136-2A786B612C3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		nuoqin|Any CPU = nuoqin|Any CPU
+		nuoqin|x64 = nuoqin|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Debug|x64.ActiveCfg = Debug|x64
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Debug|x64.Build.0 = Debug|x64
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.nuoqin|Any CPU.ActiveCfg = nuoqin|Any CPU
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.nuoqin|Any CPU.Build.0 = nuoqin|Any CPU
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.nuoqin|x64.ActiveCfg = nuoqin|x64
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.nuoqin|x64.Build.0 = nuoqin|x64
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Release|x64.ActiveCfg = Release|x64
+		{F0C48ED6-D134-49AF-A136-2A786B612C3B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52D86CE2-27F4-4324-BD88-51207CB9589E}
+	EndGlobalSection
+EndGlobal

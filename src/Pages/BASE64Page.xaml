@@ -1,0 +1,61 @@
+﻿<Page x:Class="nuoqin.src.Pages.BASE64Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:nuoqin.src.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BASE64Page">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition  Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="欢迎使用BASE64工具" FontSize="16" FontWeight="Bold" Margin="10"></TextBlock>
+        <Grid Grid.Row="1">
+            <StackPanel  Orientation="Horizontal">
+                <Button  Content="解码"  Click="decode" Height="40" Width="100" 
+                     Margin="5" />
+                <Button  Content="编码" Click="encode" 
+                    Height="40" Width="100"   Margin="5"  />
+                <Button  Content="图片解码"  Click="decodeImage" Height="40" Width="100"  
+                    Margin="5" />
+                <Button  Content="图片编码"  Click="encodeImage" Height="40" Width="100"  
+                        Margin="5" />
+                <CheckBox x:Name="check" Content="添加图片前缀" RenderTransformOrigin="0.744,0.544"  Margin="10,0,0,0" />
+
+            </StackPanel>
+            <StackPanel  HorizontalAlignment="Right">
+                <Button  Content="复制"  Click="copy" Height="40" Width="100"   Background="Orange" Foreground="White"
+                    Margin="5" />
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox  
+               x:Name="sourceCode"
+               Margin="10"
+               FontSize="14"
+               AcceptsReturn="True"
+               TextWrapping="Wrap" SelectionBrush="#FF0062FF" OpacityMask="#FF0062FF" 
+               VerticalScrollBarVisibility="Auto" />
+            <Border CornerRadius="5" BorderThickness="1" Margin="5" Padding="5"  Grid.Column="1">
+                <RichTextBox  x:Name="newCode" 
+                     FontSize="14"
+                     FontFamily="微软雅黑"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                     ScrollViewer.CanContentScroll="True" 
+                     UseLayoutRounding="True" />
+            </Border>
+        </Grid>
+    </Grid>
+
+</Page>

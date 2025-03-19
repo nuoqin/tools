@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0C48ED6-D134-49AF-A136-2A786B612C3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>nuoqin</RootNamespace>
+    <AssemblyName>nuoqin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\icon\tools.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'nuoqin|AnyCPU'">
+    <OutputPath>bin\nuoqin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'nuoqin|x64'">
+    <OutputPath>bin\x64\nuoqin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>nuoqin.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CommunityToolkit.Mvvm, Version=8.4.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>packages\CommunityToolkit.Mvvm.8.4.0\lib\netstandard2.0\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Http.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.17.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Http.Features.5.0.17\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.8.0.0\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Binder.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.CommandLine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.CommandLine.8.0.0\lib\net462\Microsoft.Extensions.Configuration.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.EnvironmentVariables.8.0.0\lib\net462\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Json.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.UserSecrets.8.0.0\lib\net462\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Diagnostics, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Diagnostics.8.0.0\lib\net462\Microsoft.Extensions.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Diagnostics.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Diagnostics.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Diagnostics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\lib\net462\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\lib\net462\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Hosting.8.0.0\lib\net462\Microsoft.Extensions.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Hosting.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.8.0.0\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Configuration.8.0.0\lib\net462\Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Console.8.0.0\lib\net462\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Debug, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Debug.8.0.0\lib\net462\Microsoft.Extensions.Logging.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.EventLog.8.0.0\lib\net462\Microsoft.Extensions.Logging.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.EventSource.8.0.0\lib\net462\Microsoft.Extensions.Logging.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.8.0.0\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.ConfigurationExtensions.8.0.0\lib\net462\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2903.40, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.2903.40\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2903.40, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.2903.40\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2903.40, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.2903.40\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Wpf.Ui, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WPF-UI.3.0.2\lib\net472\Wpf.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet, Version=16.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <HintPath>packages\YamlDotNet.16.3.0\lib\net47\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="src\entity\AppConfig.cs" />
+    <Compile Include="src\entity\CustomizeData.cs" />
+    <Compile Include="src\entity\SystemTool.cs" />
+    <Compile Include="src\entity\CustomizeFunction.cs" />
+    <Compile Include="src\entity\CutstomHttpEntity.cs" />
+    <Compile Include="src\entity\GenerateClass.cs" />
+    <Compile Include="src\entity\IpRange.cs" />
+    <Compile Include="src\entity\NavigationCard.cs" />
+    <Compile Include="src\entity\ParseData.cs" />
+    <Compile Include="src\entity\SystemModel.cs" />
+    <Compile Include="src\entity\WuData.cs" />
+    <Compile Include="src\Model\HomeViewModel.cs" />
+    <Compile Include="src\Model\MainWindowViewModel.cs" />
+    <Compile Include="src\Model\SettingsViewModel.cs" />
+    <Compile Include="src\Model\TextViewModel.cs" />
+    <Compile Include="src\Pages\AESPage.xaml.cs">
+      <DependentUpon>AESPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\BASE64Page.xaml.cs">
+      <DependentUpon>BASE64Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\DateTimePage.xaml.cs">
+      <DependentUpon>DateTimePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\HttpPage.xaml.cs">
+      <DependentUpon>HttpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\JSONPage.xaml.cs">
+      <DependentUpon>JSONPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\LocalServicePage.xaml.cs">
+      <DependentUpon>LocalServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\Md5Page.xaml.cs">
+      <DependentUpon>Md5Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\PasswordManagerPage.xaml.cs">
+      <DependentUpon>PasswordManagerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\QRCodePage.xaml.cs">
+      <DependentUpon>QRCodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\RandomPage.xaml.cs">
+      <DependentUpon>RandomPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\RSAPage.xaml.cs">
+      <DependentUpon>RSAPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\TextPage.xaml.cs">
+      <DependentUpon>TextPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\IcoPage.xaml.cs">
+      <DependentUpon>IcoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\UnicodePage.xaml.cs">
+      <DependentUpon>UnicodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\URLPage.xaml.cs">
+      <DependentUpon>URLPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\WebSockePage.xaml.cs">
+      <DependentUpon>WebSockePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\WindowsServicePage.xaml.cs">
+      <DependentUpon>WindowsServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\XMLPage.xaml.cs">
+      <DependentUpon>XMLPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pages\YAMLPage.xaml.cs">
+      <DependentUpon>YAMLPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Services\ApplicationHostService.cs" />
+    <Compile Include="src\Services\Contracts\IWindow.cs" />
+    <Compile Include="src\Services\WindowsProviderService.cs" />
+    <Compile Include="src\utils\Base64Utils.cs" />
+    <Compile Include="src\utils\CmdUtils.cs" />
+    <Compile Include="src\utils\CsvUtils.cs" />
+    <Compile Include="src\utils\CustomToolsUtils.cs" />
+    <Compile Include="src\utils\DateUtil.cs" />
+    <Compile Include="src\utils\EncipherUtils.cs" />
+    <Compile Include="src\utils\FileUtils.cs" />
+    <Compile Include="src\utils\HttpUtils.cs" />
+    <Compile Include="src\utils\JSONUtils.cs" />
+    <Compile Include="src\utils\MD5Util.cs" />
+    <Compile Include="src\utils\RandomUtils.cs" />
+    <Compile Include="src\utils\RsaKeyConvert.cs" />
+    <Compile Include="src\utils\RsaPemFormatHelper.cs" />
+    <Compile Include="src\utils\SystemCommondUtils.cs" />
+    <Compile Include="src\utils\SystemMenusUtils.cs" />
+    <Compile Include="src\utils\SystemToolsUtils.cs" />
+    <Compile Include="src\utils\SystemUtils.cs" />
+    <Compile Include="src\utils\TextUtils.cs" />
+    <Compile Include="src\utils\UncodeUtils.cs" />
+    <Compile Include="src\utils\YamlUtils.cs" />
+    <Page Include="src\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="src\Pages\AESPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\BASE64Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\DateTimePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\HttpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\JSONPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\LocalServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\Md5Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\PasswordManagerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\QRCodePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\RandomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\RSAPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Pages\TextPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\IcoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Pages\UnicodePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\URLPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\WebSockePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\WindowsServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\XMLPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Pages\YAMLPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Assets\tools\Dism++\Config\amd64\wofadk.sys" />
+    <None Include="Assets\tools\Dism++\Config\Config.ini" />
+    <None Include="Assets\tools\Dism++\Config\Data.zip" />
+    <None Include="Assets\tools\Dism++\Config\default.ui.zip" />
+    <None Include="Assets\tools\Dism++\Config\Dism++.log" />
+    <None Include="Assets\tools\Dism++\Config\Languages\zh-Hans.zip" />
+    <None Include="Assets\tools\Dism++\Config\Plugins\FrogPlugins_Pcn7FMvReAsVWfCQBfRJCw\Config.ini" />
+    <None Include="Assets\tools\Dism++\Config\UpdateInfo.zip" />
+    <None Include="Assets\tools\Dism++\Config\x86\wofadk.sys" />
+    <None Include="Assets\tools\Everything\Everything.ini" />
+    <None Include="Assets\tools\Everything\Everything.lng" />
+    <None Include="Assets\tools\Everything\Run History.csv" />
+    <None Include="Assets\tools\PixPin\language\zh-cn.qm" />
+    <None Include="Assets\tools\PixPin\language_qt\qt_zh-cn.qm" />
+    <None Include="Assets\tools\PixPin\model\detect.caffemodel" />
+    <None Include="Assets\tools\PixPin\model\detect.prototxt" />
+    <None Include="Assets\tools\PixPin\model\sr.caffemodel" />
+    <None Include="Assets\tools\PixPin\model\sr.prototxt" />
+    <None Include="Assets\tools\TrafficMonitor\skins\0默认皮肤\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤01\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤02\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤03\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤04\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤05\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤06\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤07\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤08\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤09\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤10\skin.ini" />
+    <None Include="Assets\tools\TrafficMonitor\skins\皮肤11\skin.ini" />
+    <None Include="Assets\tools\UltraISO\drivers\bootpart.sys" />
+    <None Include="Assets\tools\UltraISO\drivers\bootpt64.sys" />
+    <None Include="Assets\tools\UltraISO\drivers\ISODrive.sys" />
+    <None Include="Assets\tools\UltraISO\drivers\ISODrv64.sys" />
+    <None Include="Assets\tools\UltraISO\lang\lang.7z" />
+    <None Include="Assets\tools\WizTree\locale\en\LC_MESSAGES\default.mo" />
+    <None Include="Assets\tools\WizTree\locale\en\LC_MESSAGES\default.po" />
+    <None Include="Assets\tools\WizTree\locale\zh_CHS\LC_MESSAGES\default.mo" />
+    <None Include="Assets\tools\WizTree\locale\zh_CHS\LC_MESSAGES\default.po" />
+    <None Include="Assets\tools\WizTree\WizTree3.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\wxPay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\tools.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\aliPay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\tools\Dism++\Config\amd64\bcdboot.exe" />
+    <Content Include="Assets\tools\Dism++\Config\amd64\CBSHost.dll" />
+    <Content Include="Assets\tools\Dism++\Config\amd64\NCleaner.dll" />
+    <Content Include="Assets\tools\Dism++\Config\amd64\wimgapi.dll" />
+    <Content Include="Assets\tools\Dism++\Config\Plugins\FrogPlugins_Pcn7FMvReAsVWfCQBfRJCw\Plugin.amd64.dll" />
+    <Content Include="Assets\tools\Dism++\Config\Plugins\FrogPlugins_Pcn7FMvReAsVWfCQBfRJCw\Plugin.arm64.dll" />
+    <Content Include="Assets\tools\Dism++\Config\Plugins\FrogPlugins_Pcn7FMvReAsVWfCQBfRJCw\Plugin.x86.dll" />
+    <Content Include="Assets\tools\Dism++\Config\Plugins\FrogPlugins_Pcn7FMvReAsVWfCQBfRJCw\PluginRes.dll" />
+    <Content Include="Assets\tools\Dism++\Config\x86\bcdboot.exe" />
+    <Content Include="Assets\tools\Dism++\Config\x86\CBSHost.dll" />
+    <Content Include="Assets\tools\Dism++\Config\x86\NCleaner.dll" />
+    <Content Include="Assets\tools\Dism++\Config\x86\wimgapi.dll" />
+    <Content Include="Assets\tools\Dism++\Dism++x64.exe" />
+    <Content Include="Assets\tools\elasticsearch\elasticvue.exe" />
+    <Content Include="Assets\tools\Everything\Everything.exe" />
+    <Content Include="Assets\tools\geek\geek.exe" />
+    <Content Include="Assets\tools\HWiNFO\HWiNFO.exe" />
+    <Content Include="Assets\tools\monitorinfo\monitorinfo .exe" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-file-l1-2-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-file-l2-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-localization-l1-2-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-processthreads-l1-1-1.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-string-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-synch-l1-2-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-core-timezone-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-convert-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-environment-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-filesystem-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-heap-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-locale-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-math-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-runtime-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-stdio-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-string-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-time-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\api-ms-win-crt-utility-l1-1-0.dll" />
+    <Content Include="Assets\tools\PixPin\concrt140.dll" />
+    <Content Include="Assets\tools\PixPin\crashpad\crashpad_handler.exe" />
+    <Content Include="Assets\tools\PixPin\d3dcompiler_47.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qgif.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qicns.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qico.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qjpeg.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qsvg.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qtga.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qtiff.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qwbmp.dll" />
+    <Content Include="Assets\tools\PixPin\imageformats\qwebp.dll" />
+    <Content Include="Assets\tools\PixPin\libcrypto-1_1-x64.dll" />
+    <Content Include="Assets\tools\PixPin\libssl-1_1-x64.dll" />
+    <Content Include="Assets\tools\PixPin\msvcp140.dll" />
+    <Content Include="Assets\tools\PixPin\msvcp140_1.dll" />
+    <Content Include="Assets\tools\PixPin\PandaConfiguration.dll" />
+    <Content Include="Assets\tools\PixPin\PixKeyMouse.dll" />
+    <Content Include="Assets\tools\PixPin\PixMovie.dll" />
+    <Content Include="Assets\tools\PixPin\PixNotification.dll" />
+    <Content Include="Assets\tools\PixPin\PixPin.exe" />
+    <Content Include="Assets\tools\PixPin\PixPinAuxiliary.exe" />
+    <Content Include="Assets\tools\PixPin\PixProgramManage.dll" />
+    <Content Include="Assets\tools\PixPin\PixUtils.dll" />
+    <Content Include="Assets\tools\PixPin\PixWebCallback.dll" />
+    <Content Include="Assets\tools\PixPin\platforms\qwindows.dll" />
+    <Content Include="Assets\tools\PixPin\plugins\audio\qtaudio_wasapi.dll" />
+    <Content Include="Assets\tools\PixPin\plugins\audio\qtaudio_windows.dll" />
+    <Content Include="Assets\tools\PixPin\plugins\printsupport\windowsprintersupport.dll" />
+    <Content Include="Assets\tools\PixPin\QAppStat.dll" />
+    <Content Include="Assets\tools\PixPin\QCrashpad.dll" />
+    <Content Include="Assets\tools\PixPin\qgenericbearer.dll" />
+    <Content Include="Assets\tools\PixPin\QIconfont.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Core.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Gui.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Multimedia.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Network.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5PrintSupport.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Qml.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Sql.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Svg.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5Widgets.dll" />
+    <Content Include="Assets\tools\PixPin\Qt5WinExtras.dll" />
+    <Content Include="Assets\tools\PixPin\qxtglobalshortcut.dll" />
+    <Content Include="Assets\tools\PixPin\RobinLog.dll" />
+    <Content Include="Assets\tools\PixPin\SalmonActions.dll" />
+    <Content Include="Assets\tools\PixPin\sqldrivers\qsqlite.dll" />
+    <Content Include="Assets\tools\PixPin\styles\qwindowsvistastyle.dll" />
+    <Content Include="Assets\tools\PixPin\ucrtbase.dll" />
+    <Content Include="Assets\tools\PixPin\UiSpy.dll" />
+    <Content Include="Assets\tools\PixPin\unzip.exe" />
+    <Content Include="Assets\tools\PixPin\vcomp140.dll" />
+    <Content Include="Assets\tools\PixPin\vcruntime140.dll" />
+    <Content Include="Assets\tools\PixPin\vcruntime140_1.dll" />
+    <Content Include="Assets\tools\PixPin\zip.exe" />
+    <Content Include="Assets\tools\recuva\recuva.exe" />
+    <Content Include="Assets\tools\runtimes\win-arm64\native\WebView2Loader.dll" />
+    <Content Include="Assets\tools\runtimes\win-x64\native\WebView2Loader.dll" />
+    <Content Include="Assets\tools\runtimes\win-x86\native\WebView2Loader.dll" />
+    <Content Include="Assets\tools\TrafficMonitor\LibreHardwareMonitorLib.dll" />
+    <Resource Include="Assets\tools\TrafficMonitor\Logo\TrafficMonitor.150x150Logo.png" />
+    <Resource Include="Assets\tools\TrafficMonitor\Logo\TrafficMonitor.70x70Logo.png" />
+    <Content Include="Assets\tools\TrafficMonitor\OpenHardwareMonitorApi.dll" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\0默认皮肤\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\0默认皮肤\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\0默认皮肤\background_mask.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\0默认皮肤\background_mask_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤01\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤01\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤01\background_mask.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤01\background_mask_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤02\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤02\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤02\background_mask.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤02\background_mask_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤03\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤03\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤04\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤04\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤05\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤05\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤06\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤06\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤07\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤07\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤08\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤08\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤09\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤09\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤10\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤10\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤11\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤11\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤12\background.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤12\background_l.bmp" />
+    <Resource Include="Assets\tools\TrafficMonitor\skins\皮肤12\skin.xml" />
+    <Content Include="Assets\tools\TrafficMonitor\TrafficMonitor.exe" />
+    <Resource Include="Assets\tools\TrafficMonitor\TrafficMonitor.VisualElementsManifest.xml" />
+    <Content Include="Assets\tools\UltraISO\drivers\bootpart.exe" />
+    <Content Include="Assets\tools\UltraISO\drivers\FileDlg.exe" />
+    <Content Include="Assets\tools\UltraISO\drivers\IsoCmd.exe" />
+    <Content Include="Assets\tools\UltraISO\isoshell.dll" />
+    <Content Include="Assets\tools\UltraISO\isoshl64.dll" />
+    <Content Include="Assets\tools\UltraISO\lang\lang_cn.dll" />
+    <Content Include="Assets\tools\UltraISO\UltraISO.exe" />
+    <Content Include="Assets\tools\WizTree\WizTree.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\tools\UltraISO\backup\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\CommunityToolkit.Mvvm.8.4.0\build\CommunityToolkit.Mvvm.targets" Condition="Exists('packages\CommunityToolkit.Mvvm.8.4.0\build\CommunityToolkit.Mvvm.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\CommunityToolkit.Mvvm.8.4.0\build\CommunityToolkit.Mvvm.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\CommunityToolkit.Mvvm.8.4.0\build\CommunityToolkit.Mvvm.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+  <Import Project="packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets')" />
+</Project>
